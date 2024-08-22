@@ -31,6 +31,10 @@ def get_driver():
 options = Options()
 options.add_argument("--disable-gpu")
 options.add_argument("--headless")
+options.add_argument("--disable-dev-shm-usage")  # Overcome limited resource problems
+options.add_argument("--disable-gpu")  # Applicable for non-GPU environments
+options.add_argument("--disable-software-rasterizer")  # Avoid using the GPU entirely
+options.add_argument("--remote-debugging-port=9222")  # Port to avoid potential conflicts
 
 
 
